@@ -71,6 +71,8 @@
 .slider .swiper-slide h2::after {content: ''; width:100%; height:1px; background: rgba(255,255,255,0.3); position: absolute; left: 0; bottom: -35px; }
 .slider .swiper-slide h2 em {display: block; font-size: 59px; font-weight: 100;}
 .slider .swiper-slide p {font-size: 27px; color:#fff; padding-top: 55px;}
+.swiper-container2 .swiper-slide:after {position: static !important;}
+
 
 /* 무비 */
 .movie {padding: 100px 0;}
@@ -186,9 +188,11 @@
 }
 
 @media (max-width:480px){
-    body{background:blue}
+    
 }
 
 @media (max-width:320px){
     body{background:purple}
+    .movie_title ul {white-space: nowrap; overflow-x: auto;}
+    .movie_title ul li a {margin-right: 9px;}
 }
