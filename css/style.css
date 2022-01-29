@@ -6,6 +6,8 @@
 #banner {position: relative;}
 #movie {background: #f8f8f8;}
 #event {}
+#opening {margin: 17px 0; background: url(../images/bg01.jpg) no-repeat center top; background-size:cover;}
+#new {}
 
 /* 가운데 영역 */
 .container {position: relative; width:1280px; margin: 0 auto;}
@@ -115,10 +117,54 @@
 .event .event_left .event_box2 {float:left; width:50%;}
 .event .event_right {float: left; width: 32%;}
 
+/* 오프닝 */
+.opening {padding: 100px 0; text-align: center; color:#bb9b51;}
+.opening h2 {margin-bottom: 15px;}
+.opening span.grand {background-position: 0 -175px; display: inline-block; width: 330px; height: 50px;}
+.opening strong.date {background-position: 0 -225px; display: inline-block; width:260px; height:45px;}
+.opening p.desc {font-size: 35px; font-weight: 300; padding-bottom: 20px; background: url(../images/bar.png) no-repeat bottom center; background-size:100%;}
+
+.opening .open_box {overflow: hidden; padding:20px 3% 0 3%;}
+.opening .open_box > div {float:left; width: 27.333%; margin:4% 3% 0 3%; border:1px solid #324b44; box-sizing: border-box; background: rgba(0,0,0,0.5);}
+.opening .open_box > div h3 {color:#fff; border:1px solid #623abb; font-size: 19px; display: inline-block; padding: 10px 20px; text-align: center; display: inline-block; background: #551e9b; margin-top: -24px; font-weight: 300;}
+.opening .open_box > div p {color: #fff; font-size: 23px; font-weight: 700; padding: 6% 0 10% 0;}
+.opening .open_box > div p em {display:block; font-weight: 700;}
+.opening .open_box > div p strong {display:block;}
+
+/* 새로운 영화 */
+.new {padding: 100px 0; position: relative;}
+.new h2 {font-size: 30px; font-weight: 500; margin-bottom: 20px;}
+.new_left {position: relative; margin-right: 423px; height:500px; background: #ccc url(../images/new01.jpg) no-repeat center center; background-size: cover;}
+.new_left .play {position: absolute; top: 50%; left: 50%; width: 120px; height: 120px; transform: translate(-50%,-50%);}
+.new_left .play .st0 {fill:#fff; opacity: 0.3;}
+.new_left .play .st1 {fill:#fff;}
+.new_right {position: absolute; right: 0; top: 165px; width: 400px; height: 500px; background: #f0f0f0; padding: 34px; box-sizing: border-box;}
+.new_right .title {font-size: 28px; color: #000;}
+.new_right .release {font-size: 12px; color: #333;}
+.new_right .star {padding: 13px 0;}
+.new_right .star strong {font-size: 15px; padding-left: 5px;}
+.new_right .star span {display: inline-block; width: 20px; height: 20px; vertical-align: top;}
+.new_right .star .star1 {background-position: -393px 0;} 
+.new_right .star .star2 {background-position: -412px 0;} 
+.new_right .star .star0 {background-position: -374px 0;} 
+
+.new_right .summary {font-size: 14px;}
+.new_right .genre {padding-bottom: 3px;}
+.new_right .age {padding-bottom: 10px;}
+.new_right .desc {height: 108px; overflow: hidden; margin-bottom: 20px;}
+
+.new_right .select {overflow: hidden;}
+.new_right .select .s1 {float: left; width:49%; margin-right: 2%; background: #000;}
+.new_right .select .s2 {float: left; width:49%; background: #000;}
+.new_right .select .s3 {float: left; width:100%; margin-top: 2%;}
+.new_right .btn {overflow: hidden; margin-top: 2%; text-align: center;}
+.new_right .btn a {float:left; width:49%; box-sizing: border-box; display: block; padding: 10px 30px 12px 30px;}
+.new_right .btn a.white {background: #fff; margin-right: 2%; color: #3a0e6a; border:1px solid #3a0e6a;}
+.new_right .btn a.purple {background: #3a0e6a; color: #fff; border:1px solid #6e40c4;}
+
 
 /* 미디어 쿼리 */
 @media (max-width:1290px){
-    body{background:red}
     .row {padding:0 24px;}
     .header .nav ul li {width:93px;}
     .header .nav ul li a {font-size: 15px; padding:17px 10px;}
@@ -129,7 +175,6 @@
 }
 
 @media (max-width:1024px){
-    body{background:orange}
     #mNav{display: block;}
     .nav{display:none;}
     .header h1 {float:none; text-align: center;}
@@ -140,7 +185,6 @@
 }
 
 @media (max-width:960px){
-    body{background:yellow}
     .slider {height:500px;}
     .slider .swiper-slide h2 {margin-top: 170px; font-size: 37px; line-height:45px;}
     .slider .swiper-slide h2:after {bottom: -15px;}
@@ -149,6 +193,13 @@
     
     .movie_title ul {width: auto;}
     .movie_title ul li {width: 25%; box-sizing: border-box; }
+    
+    .opening {padding: 50px 0;}
+    .opening .open_box {display: none;}
+    .opening p.desc {font-size: 25px; background: none;}
+    
+    .new_left {margin-right: 0; height: 400px;}
+    .new_right {position: relative; top: 0; width: 100%; height:auto;} 
 }
 
 @media (max-width:768px){
@@ -176,6 +227,13 @@
     .event .event_left .event_box1 {}
     .event .event_left .event_box2 {}
     .event .event_right {display: none;}
+    
+    #opening {margin: 0;}
+    
+    #new .row {padding: 0 24px;}
+    .new {padding: 24px; background: #fff; margin-top: 24px;}
+    .new h2 {font-size: 24px; font-weight: 700; height: 27px; margin-bottom: 20px; padding-bottom: 10px;}
+    .new .new_right {padding: 24px;}
 }
 
 @media (max-width:600px){
@@ -210,6 +268,22 @@
     #event .row {padding: 0 8px;}
     .event {padding: 16px;}
     .event h2 {font-size: 18px; margin-bottom: 10px;}
+    
+    #opening {margin: 8px 0;}
+    .opening {padding: 20px 0;}
+    .opening h2 {margin-bottom: 10px;}
+    .opening span.grand {background-size: 300px; background-position: 0 -105px; width:197px; height:24px;}
+    .opening strong.date {display: none;}
+    .opening p.desc {font-size:14px; font-weight: 400; padding-bottom: 0;}
+    
+    #new .row {padding:0 8px;}
+    .new {padding: 16px; margin-top: 8px;}
+    .new h2 {font-size: 18px; margin-bottom: 0;}
+    .new .new_left {height: 300px;}
+    .new .new_right {padding:17px;}
+    .new .new_right .title {font-size: 22px;}
+    .new .new_right .select .s1 {width: 100%; margin-right: 0; margin-bottom: 2%;}
+    .new .new_right .select .s2 {width: 100%;}
 }
 
 @media (max-width:480px){
